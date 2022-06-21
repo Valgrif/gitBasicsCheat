@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos basicos GIT</title>
+</head>
+
+<body>
+    <header><img src="./img/header.png" alt="Encabezado"></header>
+    <div id="box">
+
+        <div id="left">
+
+            <h2>Introducción</h2>
+            <p>Traduccion regulinchi, hay varios anglisismos y partes que no se bien como traducirlo, aparte de explicado
+                mas con mis palabras.</p>
+            <p>Tener en cuenta</p>
+            <ul>
+                <li>Commit = Confirmacion</li>
+                <li>Branch = Rama</li>
+                <li>Hash = no se bien como traducirlo</li>
+                <li>Columna izquierda = Hoja 1 / Columna derecha = Hoja 2</li>
+            </ul>
+            <h2>Git Config</h2>
+
+            <p>Configura tu información de usuario que vas a utilizad</p>
+            <p>Actualiza el nombre de usuario que vas a utilizar: </p>
+            <p id="gitComand"> $ git config --global user.name "[name]"</p>
+
+            <p>Actualiza el email que quieres utilizar:</p>
+            <p id="gitComand">$ git config --global user.email "[direccion email]"</p>
+
+            <p>Habilita una ayuda para la linea de comandos con colores:</p>
+            <p id="gitComand">$ git config --global color.ui auto</p>
+
+            <h2>Crear y clonar repositorios</h2>
+            <p>Puedes crear un nuevo repositorio en local o hacer una copia de alguno
+                online existente para trabajar con el.
+            </p>
+            <p id="gitComand">$ git init</p>
+            <p> Habilita en la carpeta que vas a trabajar un repositorio
+                git. Importante estar posicionado en la carpeta del proyecto con el que vamos a
+                trabajar.
+            </p>
+            <p id="gitComand">$ git clone "[url]"</p>
+            <p>Clona repositorios descargados desde internet de paginas como
+                Github, GitLab o Bitbucket.
+            </p>
+
+            <h2>Realizar Cambios</h2>
+            <p>Git realizar cambios de manera facil en los archivos todo el tiempo. Una vez tu tienes inicializado o
+                clonado un repositorio, todos tus cambios estan en marcha y Git puede ver los cambios que has realizado.
+                Sin embargo para ver en orden los cmabios que has realizado debes añadirlos y confirmarlos? </p>
+
+            <p id="gitComand">$ git add [file]</p>
+            <p> Añade cambios de un solo archivo</p>
+
+            <p id="gitComand">$ git add .</p>
+            <p>Añade todos los arhivos cambiados</p>
+
+            <p id="gitComand">$ git commit -m "[comentario descriptivo]"</p>
+            <p>Al realizar el guardado de un cambio debemos de guardar conjuntamente un comentario que defina lo que
+                hemos hecho</p>
+
+            <h2>Ver cambios</h2>
+            <p>Git ofrece mucha visibilidad en el estado de tu trabajo actual, tu hisotrial de cambios y una gran
+                varidad de detalles sobre estos cambios.</p>
+
+            <p id="gitComand">$ git status</p>
+            <p> Muestra la nformacion sobre que "estado de Git" estas,
+                incluyendo la rama en la que estas y si estas al dia con el repositorio remoto</p>
+
+            <p id="gitComand">$ git log</p>
+            <p> Muestra el historial de version sobre la rama actual, incluyendo todos los mensajes descriptivos, autor,
+                tiempo en el que se hizo el commit </p>
+
+
+            <p id="gitComand">$ git log --online</p>
+            <p>Muestra una version corta del historial de la actual rama (branch) solo mostrando la primera linea del
+                mensaje descriptivo y commit hash (no se como vainas traducir esto) </p>
+
+            <p id="gitComand">$ git diff</p>
+            <p>Muestra todos los cambios entre los archivos que no tienen "staged yet" (no se bien como traducirlo,
+                "estado cargado?")</p>
+
+            <p id="gitComand">$ git show [commit]</p>
+            <p>Muestra la metadata y el contenido cambiado sobre un commit especifico. El commit es identificado por el
+                hash, el cual tiene un numero id unico generado cuando el commit es hecho</p>
+
+            <h2>The gitignore file / El archivo gitignorado</h2>
+            <p>Hay una cierta cantidad de archivos que puede que no quieras rastrear (resgistrar), como imagenes o
+                videos o archivos que contengan informacion sensible como credenciales. Tu puedes hacer esto creando un
+                archico especial llamado ".gitignore". Dentro de este archivo puedes listar de forma individual archivos
+                para no usar o excluir tipos enteros de archivos, por ejemplo ".jpg" o "mp4"</p>
+
+        </div>
+        <div id="right">
+            <h2>Deshacer cambios y commits </h2>
+            <p>Hay dos formas para realizar cambios en tu historial de confirmaciones (commit)</p>
+
+            <p id="gitComand">$ git revert [commit]</p>
+            <p>Realiza un nuevo commit que deshace todos los cambios del commit llamado, normalmente se usa en el commit
+                mas reciente</p>
+
+            <p id="gitComand">$ git reset [commit] </p>
+            <p>Deshace todos los commit despues del [commit] y manttiene los cambios en local. Pese a ser una forma
+                poderosa de deshacer el commit, tiene un alto riesgo de crear conflictors si has hecho muchos cambios
+                desde ese commit</p>
+
+            <p id="gitComand">$ git reset --hard </p>
+            <p>Descarta todos los cambios locales en el proyecto que estas trabajando y resetea todos los archivos hasta
+                el punto de estado en el que ellos estaban en el ultimo [commit] </p>
+
+            <h2>Contectar a repositorios remotos</h2>
+            <p>Los repositorios locales pueden tener conecciones a uno o mas repositorios remoto para enviar o extraer
+                cambios de ellos. Si tu clonas un repositorio, la URL remota que clonas se establecera como el origen
+            </p>
+            <p id="gitComand">$ git remote add [remote name] [url]</p>
+            <p> Especifica el repositorio remoto para tu repositorio local. La url apunta a el repositorio en un server
+                remoto o en un servicio como GitHub, GitLab o Bitbucket</p>
+
+            <h2>Sincronizar cambios</h2>
+            <p>Sincronizar tu repositorio con el repositorio remoto</p>
+            <p id="gitComand">$ git push [remote name] [branch]</p>
+            <p>Carga todos los commits locales de tu historial local a su rama remota? (Aqui necesito la explicacion de
+                Marce) </p>
+
+            <p id="gitComand">$ git fetch </p>
+            <p>Descarga todo el historial de tu rama remota pero no realiza las confirmaciones automaticas en ella</p>
+
+            <p id="gitComand">$ git merge </p>
+            <p>Combina el historial de busqueda de tu rama remota con tu rama local actual </p>
+
+            <p id="gitComand">$ git pull</p>
+            <p>Actualiza tu rama de trabajo local con todos los nuevos commits realizado de su correspondiente rama
+                remota. Viene siendo una combinacion de "git fetch" y "git merge"</p>
+
+            <h2>Branches / Ramas</h2>
+            <p>La ramificacion permite que realices commits que no afectan a tu otro trabajo hasta que este listo para
+                aplicar esos cambios. Cualquier commit será realizado sobre la rama que estes trabajando y no sobre la
+                principal o rama maestra. Siempre puedes usar "git status" para ver en cual rama estas </p>
+            <p id="gitComand">$ git branch [branch-name]</p>
+            <p>Crea una nueva rama. Por ejemplo: git branch caracteristica-A</p>
+            <p id="gitComand">$ git checkout [branch-name]</p>
+            <p>Cambia a la rama especificada y actualiza cualquier documento que use esa version</p>
+
+            <h3>Diagrama de ramificacion de Git</h3>
+            <p><img id="diagram" src="./img/diagrama.png" alt="Diagrama de ramas"></p>
+
+            <p id="gitComand">$ git merge [branch-name]</p>
+            <p>Combina el hisotiral de la rama especificada con la rama atual. Piensa siempre en Git metiendo cosas en
+                el . En este caso, esxtrayendo los cambios de la rama especificada a su rama de salida actual </p>
+
+            <p id="gitComand">$ git branch -d [branch-name]</p>
+            <p>Elimina la rama especificada</p>
+            <a href="https://www.gitkraken.com/learn/git">
+                <img id="logo" src="./img/logo.png" alt="logo">
+            </a>
+
+
+        </div>
+
+    </div>
+
+    </div>
+    <footer><img src="./img/footer.png" alt="Pie de pagina"></footer>
+
+
+
+</body>
+
+</html>
