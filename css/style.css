@@ -17,9 +17,9 @@ p{
 }
 
 #gitComand{
-    width: fit-content;
     padding: 2%;
     background-color: rgb(219, 217, 214);
+    color: red;
 
 }
 #logo{
