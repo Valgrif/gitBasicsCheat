@@ -28,8 +28,16 @@ p{
     margin-left: 50%;
 }
 
-#diagram{
-    
+span{
+    padding: 0.4%;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-radius: 15%;
+    border-color: red;
+    background-color: rgb(219, 217, 214);
 }
 
 /*------------------- ENCABEZADO--------------------*/
