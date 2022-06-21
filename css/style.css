@@ -15,6 +15,9 @@ body{
 p{
     text-align: justify;
 }
+b{
+    color:red;
+}
 
 #gitComand{
     padding: 2%;

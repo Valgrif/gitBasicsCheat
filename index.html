@@ -94,7 +94,7 @@
             <h2>The gitignore file / El archivo gitignorado</h2>
             <p>Hay una cierta cantidad de archivos que puede que no quieras rastrear (resgistrar), como imagenes o
                 videos o archivos que contengan informacion sensible como credenciales. Tu puedes hacer esto creando un
-                archico especial llamado ".gitignore". Dentro de este archivo puedes listar de forma individual archivos
+                archico especial llamado <b>.gitignore</b>. Dentro de este archivo puedes listar de forma individual archivos
                 para no usar o excluir tipos enteros de archivos, por ejemplo ".jpg" o "mp4"</p>
 
         </div>
@@ -103,7 +103,7 @@
             <p>Hay dos formas para realizar cambios en tu historial de confirmaciones (commit)</p>
 
             <p id="gitComand">$ git revert [commit]</p>
-            <p>Realiza un nuevo commit que <span>deshace</span> todos los cambios del commit llamado, normalmente se usa en el commit
+            <p>Realiza un nuevo <b>[commit]</b> que <span>deshace</span> todos los cambios del commit llamado, normalmente se usa en el <b>[commit]</b>
                 mas reciente</p>
 
             <p id="gitComand">$ git reset [commit] </p>
@@ -117,10 +117,10 @@
 
             <h2>Contectar a repositorios remotos</h2>
             <p>Los repositorios locales pueden tener conecciones a uno o mas repositorios remoto para enviar o extraer
-                cambios de ellos. Si tu clonas un repositorio, la URL remota que clonas se establecera como el origen
+                cambios de ellos. Si tu clonas un repositorio, la URL remota que clonas se establecera como el <b>origen</b>
             </p>
             <p id="gitComand">$ git remote add [remote name] [url]</p>
-            <p> Especifica el repositorio remoto para tu repositorio local. La url apunta a el repositorio en un server
+            <p> Especifica el repositorio remoto para tu repositorio local. La <b>[url]</b> apunta a el repositorio en un server
                 remoto o en un servicio como GitHub, GitLab o Bitbucket</p>
 
             <h2>Sincronizar cambios</h2>
@@ -142,9 +142,9 @@
             <h2>Branches / Ramas</h2>
             <p>La ramificacion permite que realices commits que no afectan a tu otro trabajo hasta que este listo para
                 aplicar esos cambios. Cualquier commit será realizado sobre la rama que estes trabajando y no sobre la
-                principal o rama maestra. Siempre puedes usar "git status" para ver en cual rama estas </p>
+                principal o rama maestra. Siempre puedes usar <b>git status</b> para ver en cual rama estas </p>
             <p id="gitComand">$ git branch [branch-name]</p>
-            <p>Crea una nueva rama. Por ejemplo: git branch caracteristica-A</p>
+            <p>Crea una nueva rama. Por ejemplo: <b>git branch caracteristica-A</b></p>
             <p id="gitComand">$ git checkout [branch-name]</p>
             <p>Cambia a la rama especificada y actualiza cualquier documento que use esa version</p>
 
@@ -152,8 +152,8 @@
             <p><img id="diagram" src="./img/diagrama.png" alt="Diagrama de ramas"></p>
 
             <p id="gitComand">$ git merge [branch-name]</p>
-            <p>Combina el hisotiral de la rama especificada con la rama atual. Piensa siempre en Git metiendo cosas en
-                el . En este caso, esxtrayendo los cambios de la rama especificada a su rama de salida actual </p>
+            <p>Combina el historial de la rama especificada con la rama atual. Piensa siempre en Git metiendo cosas en
+                el . En este caso, esxtrayendo los cambios de la <b>rama especificada</b> a su rama de salida actual </p>
 
             <p id="gitComand">$ git branch -d [branch-name]</p>
             <p>Elimina la rama especificada</p>
